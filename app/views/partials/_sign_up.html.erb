@@ -1,0 +1,34 @@
+<!-- Modal -->
+<%= form_for :user, url: user_register_path do %>
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= image_tag("DogsWelcomePeopleTolerated.gif") %>
+      </div>
+      <div class="modal-body">
+        <!-- Form Body -->
+        <div class="form-group">
+          <%= text_field(:user, :name, :class => 'form-control input-lg', :placeholder => 'Name') %>
+        </div>
+        <div class="form-group">
+          <%= email_field(:user, :email, :class => 'form-control input-lg', :placeholder => 'Email') %>
+        </div>
+        <div class="form-group">
+          <%= telephone_field(:user, :cell_number, :class => 'form-control input-lg', :placeholder => 'Cell Number') %>
+        </div>
+
+        <div class="form-group">
+          <%= password_field(:user, :password, :class => 'form-control input-lg', :placeholder => 'Password') %>
+        </div>
+        <!-- End Form Body -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= submit_tag('Woof!', :class => 'btn btn-primary') %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

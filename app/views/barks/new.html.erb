@@ -1,0 +1,14 @@
+<%= form_for :bark, url: barks_path do |f| %>
+  <p>
+    To
+    <%= f.text_field :receiver_id %>
+  </p>
+
+  <p>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

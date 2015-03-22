@@ -1,0 +1,21 @@
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#public_bark" aria-controls="home" role="tab" data-toggle="tab">Public Barks</a></li>
+    <li role="presentation"><a href="#bark_to_me" aria-controls="profile" role="tab" data-toggle="tab">Barked at me</a></li>
+    <li role="presentation"><a href="#bark_from_me" aria-controls="messages" role="tab" data-toggle="tab">My Barks</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="public_bark">
+      <%= render "partials/barks_public_noise" %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="bark_to_me">
+      <%= render "partials/barks_to_me" %>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="bark_from_me">
+      <%= render "partials/barks_from_me" %>
+    </div>
+  </div>
+</div>

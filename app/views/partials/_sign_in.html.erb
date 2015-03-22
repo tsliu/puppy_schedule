@@ -1,0 +1,27 @@
+<!-- Modal -->
+<%= form_tag(user_log_in_path, method: 'post') do %>
+  <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4>Welcome Back</h4>
+        </div>
+        <div class="modal-body">
+          <!-- Form Body -->
+          <div class="form-group">
+            <%= text_field_tag('email', nil, :class => 'form-control input-lg', :placeholder => 'Email') %>
+          </div>
+          <div class="form-group">
+            <%= password_field_tag('password', nil, :class => 'form-control input-lg', :placeholder => 'Password') %>
+          </div>
+          <!-- End Form Body -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= submit_tag('Woof!', :class => 'btn btn-primary') %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,38 @@
+body {
+  padding-top: 75px;
+  background-color: #f6f6f6 !important;
+}
+
+.tab-pane {
+  padding-top: 20px;
+}
+
+.navbar-brand {
+  margin-top: -13px;
+}
+
+.navbar-nav button {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.bento-corner {
+  background: url('Bento.png');
+  background-size: 300px, 170px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 170px;
+}
+
+.carousel-control {
+  background-image: none !important;
+}
+
+.carousel .item {
+  left: 0 !important;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}

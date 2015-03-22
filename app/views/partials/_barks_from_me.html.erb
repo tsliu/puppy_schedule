@@ -1,0 +1,13 @@
+<% @barks_from_me.each do |bark| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="#"><%= bark.sender.name %></a>&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-arrow-right"></span>&nbsp;&nbsp;
+      <a href="#"><%= bark.receiver ? bark.receiver.name : 'No One Specific' %></a>
+      <span class="pull-right"><%= display_time(bark.created_at) %></span>
+    </div>
+    <div class="panel-body">
+      <a href="#"><%= bark.preview %></a>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>DOB</th>
+    <th>Breed</th>
+    <th>user_id</th>
+  </tr>
+  <% @puppies.each do |puppy| %>
+    <tr>
+      <td><%= puppy.name %></td>
+      <td><%= puppy.dob %></td>
+      <td><%= puppy.breed %></td>
+      <td><%= puppy.user_id %></td>
+      <td><%= button_to "Edit", {controller: "puppy", action: "edit", id: puppy.id} %></td>
+      <td><%= button_to "Delete", {controller: "puppy", action: "delete", id: puppy.id},
+                        method: "delete", data: { confirm: "Are you sure to delete this puppy?"}%></td>
+    </tr>
+  <% end %>
+</table>

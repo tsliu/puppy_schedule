@@ -1,0 +1,16 @@
+<h1>Edit <%=@puppy.name%></h1>
+
+<%= form_for :puppy, url: puppy_update_path, method: :patch do |f| %>
+  <%= f.hidden_field :id %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :dob %>
+  <%= f.date_select :dob %>
+
+  <%= f.label :breed %>
+  <%= f.text_field :breed %>
+
+  <%= f.submit %>
+<% end %>

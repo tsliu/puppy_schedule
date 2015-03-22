@@ -1,0 +1,20 @@
+<%= form_for :puppy, url: puppy_add_path do %>
+  <p>
+    Puppy's Name
+    <%= text_field(:puppy, :name) %>
+  </p>
+
+  <p>
+    Date of Birth
+    <%= date_select(:puppy, :dob, order: [:day, :month, :year]) %>
+  </p>
+
+  <p>
+    Breed
+    <%= text_field(:puppy, :breed) %>
+  </p>
+
+  <p>
+    <%= submit_tag %>
+  </p>
+<% end %>

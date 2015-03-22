@@ -1,0 +1,24 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#welcomeCarousel').carousel({interval: 10000});
+  });
+</script>
+
+<div id="welcomeCarousel" class="carousel container slide">
+  <!-- Dot Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#welcomeCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#welcomeCarousel" data-slide-to="1"></li>
+    <li data-target="#welcomeCarousel" data-slide-to="2"></li>
+    <li data-target="#welcomeCarousel" data-slide-to="3"></li>
+    <li data-target="#welcomeCarousel" data-slide-to="4"></li>
+  </ol>
+  <!-- Items -->
+  <div class="carousel-inner">
+    <div class="active item"><%= image_tag("carousel1.jpg") %></div>
+    <div class="item"><%= image_tag("carousel2.jpg") %></div>
+    <div class="item"><%= image_tag("carousel3.jpg") %></div>
+    <div class="item"><%= image_tag("carousel4.jpg") %></div>
+    <div class="item"><%= image_tag("carousel5.jpg") %></div>
+  </div>
+</div>
