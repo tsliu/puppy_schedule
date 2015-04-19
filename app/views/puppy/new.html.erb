@@ -1,20 +1,22 @@
+<div>
 <%= form_for :puppy, url: puppy_add_path do %>
-  <p>
-    Puppy's Name
-    <%= text_field(:puppy, :name) %>
-  </p>
+  <div class="form-group">
+    <label>Puppy's Name</label>
+    <%= text_field(:puppy, :name, :class => 'form-control', :placeholder => 'Enter Name here') %>
+  </div>
 
-  <p>
-    Date of Birth
-    <%= date_select(:puppy, :dob, order: [:day, :month, :year]) %>
-  </p>
+  <div class="form-group">
+    <label>Puppy's Birthday</label>
+    <%= text_field(:puppy, :dob, :type=> :date, :class => 'form-control datepicker') %>
+  </div>
 
-  <p>
-    Breed
-    <%= text_field(:puppy, :breed) %>
-  </p>
+  <div class="form-group">
+    <label>Puppy's Breed</label>
+    <%= text_field(:puppy, :breed, :class => 'form-control', :placeholder => 'Enter Breed here') %>
+  </div>
 
-  <p>
-    <%= submit_tag %>
-  </p>
+  <div class="form-group">
+    <%= submit_tag('Add this puppy', :class => 'form-control btn btn-large btn-default')%>
+  </div>
 <% end %>
+</div>
